@@ -7,9 +7,10 @@ import './Map.css'
 
 const Map = () => {
 
-  const [center, setCenter] = useState({lat: 0, lng: 0});
-  
-  const [zoom, setZoom] = useState(0);
+  const [center] = useState({lat: 0, lng: 0});
+  // setCenter
+  const [zoom] = useState(0);
+  // setZoom
 
   const [ currentPosition, setCurrentPosition ] = useState({lat: null, lng: null});
   
