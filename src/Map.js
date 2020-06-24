@@ -16,8 +16,8 @@ const Map = () => {
   const handleClick = () => {
       if (navigator.geolocation) {
           navigator.geolocation.watchPosition(function(position) {
-              console.log("Latitude is :", position.coords.latitude);
-              console.log("Longitude is :", position.coords.longitude);
+              // console.log("Latitude is :", position.coords.latitude);
+              // console.log("Longitude is :", position.coords.longitude);
             var currentPosition = {
                 lat: position.coords.latitude, lng: position.coords.longitude
               };
