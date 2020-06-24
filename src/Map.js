@@ -14,7 +14,7 @@ const Map = () => {
 
   const [ currentPosition, setCurrentPosition ] = useState({lat: null, lng: null});
   // use useEffect here:
-  useEffect(() => {
+  const handleClick = () => {
       if (navigator.geolocation) {
           navigator.geolocation.watchPosition(function(position) {
               // console.log("Latitude is :", position.coords.latitude);
@@ -28,14 +28,14 @@ const Map = () => {
             }
             );
         };
-    });
+    };
 
     return (
         <div className="map-container">
           <Button 
             className="button"
-            // onClick={() => handleClick()}
-            onClick={() => setCurrentPosition(currentPosition)}
+            onClick={() => handleClick()}
+            // onClick={() => setCurrentPosition(currentPosition)}
           > 
             <h2>Find Me!</h2>
           </Button>
