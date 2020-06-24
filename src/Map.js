@@ -21,7 +21,7 @@ const Map = () => {
             var currentPosition = {
                 lat: position.coords.latitude, lng: position.coords.longitude
               };
-                console.log("currentPosition", currentPosition)
+                // console.log("currentPosition", currentPosition)
                 // window.open(`https://maps.google.com?q=${current.lat}`+","+`${current.lng}`);
               setCurrentPosition(currentPosition);
             }
