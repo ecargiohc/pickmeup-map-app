@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 import Button from 'react-bootstrap/Button';
@@ -13,8 +13,8 @@ const Map = () => {
   // setZoom
 
   const [ currentPosition, setCurrentPosition ] = useState({lat: null, lng: null});
-  
-  const handleClick = () => {
+  // use useEffect here:
+  useEffect(() => {
       if (navigator.geolocation) {
           navigator.geolocation.watchPosition(function(position) {
               // console.log("Latitude is :", position.coords.latitude);
@@ -28,13 +28,14 @@ const Map = () => {
             }
             );
         };
-    };
+    });
 
     return (
         <div className="map-container">
           <Button 
             className="button"
-            onClick={() => handleClick()}
+            // onClick={() => handleClick()}
+            onClick={() => setCurrentPosition(currentPosition)}
           > 
             <h2>Find Me!</h2>
           </Button>
