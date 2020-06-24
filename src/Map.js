@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import './Map.css'
 
 
-const Map = (props) => {
+const Map = () => {
 
   const [center, setCenter] = useState({lat: 0, lng: 0});
   
